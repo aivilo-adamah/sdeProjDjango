@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="C:\Users\nixon\OneDrive\Bureau\PROJ_PYTHON\static\css\login.css" >
+    <link href="{% static 'pages/assets/css/login.css'%}" rel="stylesheet">
+</head>
+<body>
+    <form method="POST" >
+    <div class="box" >
+        <div class="form">
+            <h2>Login</h2>
+            <div class="inputBox">
+                <input type="text" required="required" id="user" name="user">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" id="passwd" name="passwd">
+                <span>Password</span>
+                <i></i>
+            </div><br />
+            <div class="links">
+                <a href="#">Forgot password</a>
+                <a href="C:\Users\nixon\OneDrive\Bureau\PROJ_PYTHON\templates\sign_up.html">Signup</a>
+            </div><br><center>
+            <input type="submit" value="login"></center>
+        </div>
+    </div>
+</form>
+    
+</body>
+</html>

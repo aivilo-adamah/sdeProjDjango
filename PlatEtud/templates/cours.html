@@ -1,0 +1,239 @@
+{% extends 'racine.html' %}
+{% load static %}
+{% block main-content %}
+
+<section id="portfolio" class="portfolio sections-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>COURS</h2>
+      <h4>Vos cours sont disponibles ici cliquez sur le cours que vous voulez suivre.</h4>
+    </div>
+
+    <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+
+
+      <div>
+        <ul class="portfolio-flters">
+          <li data-filter="*" class="filter-active">TOUT</li>
+          <li data-filter=".filter-app">JAVA - PY</li>
+          <li data-filter=".filter-product">C# - PHP</li>
+          <li data-filter=".filter-branding">PHP</li>
+          <li data-filter=".filter-books">CHOIX</li>
+        </ul><!-- End Portfolio Filters -->
+      </div>
+
+
+      <div class="row gy-4 portfolio-container">
+        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+          <form method="POST" action="{% url 'search' %}">
+            {% csrf_token %}
+          <!-- {% static "pages/assets/img/portfolio/cours2/cours2/java 2.jpeg" %} -->
+          
+            <button  type="submit" name="search" value="python"  href="#" data-gallery="portfolio-gallery-app" class="glightbox img">
+              <div class="portfolio-wrap">
+                <img src="{% static 'pages/assets/img/portfolio/cours2/python.jpg'%}" class="img-fluid " alt=""></img>
+            </div>
+            </button>
+              <div class="portfolio-info">
+              <h4><a href="#" title="More Details">JAVA</a></h4>
+              <p>Du contenu java pour vous </p>
+            </div>
+           
+          
+        </form>
+          </div>
+       
+
+          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+            <form method="POST" action="{% url 'search' %}">
+              {% csrf_token %}
+            <!-- {% static "pages/assets/img/portfolio/cours2/cours2/java 2.jpeg" %} -->
+            
+              <button  type="submit" name="search" value="python"  href="#" data-gallery="portfolio-gallery-app" class="glightbox img">
+                <div class="portfolio-wrap">
+                  <img src="{% static 'pages/assets/img/portfolio/cours2/c#2.jpg'%}" class="img-fluid " alt=""></img>
+              </div>
+              </button>
+                <div class="portfolio-info">
+                <h4><a href="#" title="More Details">JAVA</a></h4>
+                <p>Du contenu java pour vous </p>
+              </div>
+             
+            
+          </form>
+            </div>
+
+            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+              <form method="POST" action="{% url 'search' %}">
+                {% csrf_token %}
+              <!-- {% static "pages/assets/img/portfolio/cours2/cours2/java 2.jpeg" %} -->
+              
+                <button  type="submit" name="search" value="python"  data-gallery="portfolio-gallery-app" class="glightbox img">
+                  <div class="portfolio-wrap">
+                    <img src="{% static 'pages/assets/img/portfolio/cours2/php2.jpg'%}" class="img-fluid " alt=""></img>
+                </div>
+                </button>
+                  <div class="portfolio-info">
+                  <h4><a href="#" title="More Details">JAVA</a></h4>
+                  <p>Du contenu java pour vous </p>
+                </div>
+               
+              
+            </form>
+              </div>
+
+              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                <form method="POST" action="{% url 'search' %}">
+                  {% csrf_token %}
+                <!-- {% static "pages/assets/img/portfolio/cours2/cours2/java 2.jpeg" %} -->
+                
+                  <button  type="submit" name="search" value="python"  href="#" data-gallery="portfolio-gallery-app" class="glightbox img">
+                    <div class="portfolio-wrap">
+                      <img src="{% static 'pages/assets/img/portfolio/cours2/java3.jpg'%}" class="img-fluid " alt=""></img>
+                  </div>
+                  </button>
+                    <div class="portfolio-info">
+                    <h4><a href="#" title="More Details">JAVA</a></h4>
+                    <p>Du contenu java pour vous </p>
+                  </div>
+                 
+                
+              </form>
+                </div>
+
+                <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                  <form method="POST" action="{% url 'search' %}">
+                    {% csrf_token %}
+                  <!-- {% static "pages/assets/img/portfolio/cours2/cours2/java 2.jpeg" %} -->
+                  
+                    <button  type="submit" name="search" value="python"  href="#" data-gallery="portfolio-gallery-app" class="glightbox img">
+                      <div class="portfolio-wrap">
+                        <img src="{% static 'pages/assets/img/portfolio/cours2/php.jpg'%}" class="img-fluid " alt=""></img>
+                    </div>
+                    </button>
+                      <div class="portfolio-info">
+                      <h4><a href="#" title="More Details">JAVA</a></h4>
+                      <p>Du contenu java pour vous </p>
+                    </div>
+                   
+                  
+                </form>
+                  </div>
+      
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                          <form method="POST" action="{% url 'search' %}">
+
+                            {% csrf_token %}
+                          <!-- {% static "pages/assets/img/portfolio/cours2/cours2/java 2.jpeg" %} -->
+                          
+                            <button  type="submit" name="search" value="python"  href="#" data-gallery="portfolio-gallery-app" class="glightbox img">
+                              <div class="portfolio-wrap">
+                                <img src="{% static 'pages/assets/img/portfolio/cours2/java.jpg'%}" class="img-fluid " alt=""></img>
+                            </div>
+                            </button>
+                              <div class="portfolio-info">
+                              <h4><a href="#" title="More Details">JAVA</a></h4>
+                              <p>Du contenu java pour vous </p>
+                            </div>
+                           
+                          
+                        </form>
+                          </div>
+
+
+                          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                            <form method="POST" action="{% url 'search' %}">
+                              {% csrf_token %}
+                            <!-- {% static "pages/assets/img/portfolio/cours2/cours2/java 2.jpeg" %} -->
+                            
+                              <button  type="submit" name="search" value="python"  href="#" data-gallery="portfolio-gallery-app" class="glightbox img">
+                                <div class="portfolio-wrap">
+                                  <img src="{% static 'pages/assets/img/portfolio/cours2/python.jpg'%}" class="img-fluid " alt=""></img>
+                              </div>
+                              </button>
+                                <div class="portfolio-info">
+                                <h4><a href="#" title="More Details">JAVA</a></h4>
+                                <p>Du contenu java pour vous </p>
+                              </div>
+                             
+                            
+                          </form>
+                            </div>
+
+                            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                              <form method="POST" action="{% url 'search' %}">
+                                {% csrf_token %}
+                              <!-- {% static "pages/assets/img/portfolio/cours2/cours2/java 2.jpeg" %} -->
+                              
+                                <button  type="submit" name="search" value="python" data-gallery="portfolio-gallery-app" class="glightbox img">
+                                  <div class="portfolio-wrap">
+                                    <img src="{% static 'pages/assets/img/portfolio/cours2/c#2.jpg'%}" class="img-fluid " alt="">
+                                </div>
+                                </button>
+                                  <div class="portfolio-info">
+                                  <h4>JAVA</h4>
+                                  <p>Du contenu java pour vous </p>
+                                </div>
+                               
+                              
+                            </form>
+                              </div>
+
+                              <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                                <form method="POST" action="{% url 'search' %}">
+                                  {% csrf_token %}
+                                <!-- {% static "pages/assets/img/portfolio/cours2/cours2/java 2.jpeg" %} -->
+                                
+                                  <button  type="submit" name="search" value="python"  href="#" data-gallery="portfolio-gallery-app" class="glightbox img">
+                                    <div class="portfolio-wrap">
+                                      <img src="{% static 'pages/assets/img/portfolio/cours2/java4.jpg'%}" class="img-fluid " alt=""></img>
+                                  </div>
+                                  </button>
+                                    <div class="portfolio-info">
+                                    <h4><a href="#" title="More Details">JAVA</a></h4>
+                                    <p>Du contenu java pour vous </p>
+                                  </div>
+                                 
+                                
+                              </form>
+                                </div>
+<!-- ajout -->
+
+<form method="POST" action="{% url 'search' %}">
+  {% csrf_token %}
+  <div class="col-xl-4 col-md-6 portfolio-item filter-product uniq">
+    <div class="portfolio-wrap bg-image hover-overlay hover-zoom hover-shadow ripple">
+      <button type="submit" name="search" value="python" class="mask glightbox bt"
+        style="background-color: hsla(195, 83%, 58%, 0.2)" title="More Details" data-gallery="portfolio-gallery-app">
+        <img src="#" class="img-fluid " alt="">
+      </button>
+      <div class="portfolio-info">
+        <h4>Python</h4>
+      </div>
+    </div>
+  </div><!-- End Portfolio Item -->
+
+</form>
+
+<!-- ajout -->
+
+
+       <!-- End Portfolio Item -->
+        <section class="col-xl-4 col-md-6 portfolio-item filter-app">
+         
+        </div><!-- End Portfolio Item -->
+
+      
+
+      
+
+       <!-- End Portfolio Item -->
+
+      </div><!-- End Portfolio Container -->
+
+    </div>
+
+  </div>
+</section>
+{% endblock main-content %}

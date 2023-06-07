@@ -1,0 +1,77 @@
+{% extends 'racine.html' %}
+{% load static %}
+{% block main-content %}
+
+
+<section id="portfolio" class="portfolio sections-bg">
+    <div class="container" data-aos="fade-up">
+  
+      <div class="section-header">
+        <h2>SEARCH</h2>
+        <form method="POST" action="{% url 'search' %}">
+       <div class="input-group mb-3">
+          {% csrf_token %}
+     
+          <input type="text" name="search" class="form-control" aria-label="Username">
+          
+       </div>
+       <div style="display:flex;">
+
+        <button href="#" type="submit" class="btn btn-primary my-2" style="margin-left: 30vw;width: 90px;background-color: #00008B;font-size: 20px;">SEARCH</button>
+        
+        <button href="#" type="reset" class="btn btn-primary my-2" style="margin-left: 10vw;width: 90px;background-color: #00008B;font-size: 20px;">DIRECT</button>
+     </div>
+       </form>
+
+      </div>
+  
+      <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+  
+  
+        <div>
+          <ul class="portfolio-flters">
+            <li data-filter="*" class="filter-active">Tout</li>
+            <li data-filter=".filter-app">Vidéo youtube</li>
+            <li data-filter=".filter-product">cours pdf</li>
+            <li data-filter=".filter-branding">Docs</li>
+            <li data-filter=".filter-books">Livres</li>
+          </ul><!-- End Portfolio Filters -->
+        </div>
+  
+  
+        <div class="row gy-4 portfolio-container">
+        {% for video in videos %}
+          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+            <!-- {% static "pages/assets/img/portfolio/cours2/java 2.jpeg" %} -->
+            <div class="portfolio-wrap">
+              <a href="{{video.url}}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{video.thumbnail}}" class="img-fluid" alt=""></a>
+              <div class="portfolio-info">
+                <h4 style="width: 400px;overflow: hidden;
+                text-overflow: ellipsis;white-space: nowrap;min-height: 50px;text-align: center;margin: 0 auto;"><a href="#" title="More Details">{{video.title}}</a></h4>
+                <div class="btn-group">
+                    <a type="button" href="{{video.url}}" class="btn btn-sm btn-outline-secondary" style="width: 70px;background-color: #0000FF;font-size: 20px;">VIEW</a>
+                </div>
+                
+                <small class="text-muted" style=" margin-left: 10vw; font-size: 10px;">{{video.duration}} mins</small>
+
+                <p></p>
+              </div>
+            </div>
+
+          </div><!-- End Portfolio Item -->
+        {% endfor %}
+             
+          <section class="col-xl-4 col-md-6 portfolio-item filter-app">
+           
+          </div><!-- End Portfolio Item -->
+    
+        </div><!-- End Portfolio Container -->
+  
+      </div>
+  
+    </div>
+  </section>
+
+
+
+{% endblock main-content %}

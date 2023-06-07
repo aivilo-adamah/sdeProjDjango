@@ -1,0 +1,165 @@
+{% extends 'racine.html' %}
+{% load static %}
+{% block title %}LOGIN{% endblock title %} 
+{% block main-content %}
+    
+
+
+<style>
+    body{
+     background:linear-gradient(75deg,#370e71,#02eada,#dde5eb,hsl(240, 79%, 55%));
+    }
+</style>
+        <div class="form-container">
+            <form action="bd.php" method="POST" id="id-form">
+                <h2>Login</h2>
+                <label for="usernom">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+    
+                <input type="submit" name="submit" value="Register">
+
+                <div class="text-center text-primary fw-bold">
+                    <small>New User ? <a href="{% url 'registration' %}" class="text-danger">SingUp Now </a></small>
+                </div>
+            </form>
+        </div>
+
+
+<!-- <style>
+       *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+     background:linear-gradient(75deg,black,violet);
+    /*background: #23242a;*/
+    
+
+}
+.box{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, rgb(161, 130, 238), rgb(161, 130, 238));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, rgb(161, 130, 238), rgb(161, 130, 238));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.form{
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.form h2{
+    color: rgb(217, 12, 217);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1em;
+}
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+.inputBox label{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: darkgrey;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.inputBox input:valid ~ label,
+.inputBox input:focus ~ label{
+    color: violet;
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+} 
+</style>
+ -->
+         <!-- <div class="box">
+            <div class="form">
+                <form action="bd.php" method="POST" id="id-form">
+                    <h2>Login</h2>
+                    <div class="inputBox">
+                        <label for="usernom">Username</label>
+                    <input type="text" id="username" name="username" required> 
+                    </div>
+                   
+                        <div class="inputBox">
+                            <label for="password">Password</label>
+                                        <input type="password" id="password" name="password" required>
+                            
+                                        <input type="submit" name="submit" value="Register">
+                        </div>
+                                        
+    
+                    <div class="">
+                        <small>New User ? <a href="{% url 'registration' %}" class="">SingUp Now </a></small>
+                    </div>
+                </form>
+            </div>
+           
+        </div>
+
+ -->
+
+<!-- {% endblock main-content %} -->
